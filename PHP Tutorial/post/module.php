@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Area</title>
+	<title>Module</title>
 </head>
 <body>
 	<?php 
