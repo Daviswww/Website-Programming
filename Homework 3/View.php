@@ -4,12 +4,18 @@
 	<title>View</title>
 </head>
 <body>
+<form action = "Table.php" method="POST">
+	<input type="radio" name="op" value="list" checked="on">List
+	<input type="radio" name="op" value="statistics">Statistics 
+	<input type="radio" name="op" value="percentage">percentage 
+	<button type="submit" name = "submit"> submit </button>
+</form>
 <form action = "include/signup.inc.php" method="POST">
 	<div>
 		<p>
 			Gender:
 			<input type="radio" name="gender" value="Female">Female
-			<input type="radio" name="gender" value="male">Male	
+			<input type="radio" name="gender" value="Male">Male	
 		</p>
 		<p>
 			Age:<input type="text" name="age" placeholder="Age"></p>		
