@@ -182,7 +182,8 @@ table, th, td {
 				}
 			}
 			echo "</tr>";
-			echo "</table><br>";		}
+			echo "</table><br>";		
+		}
 		mysqli_close($conn);
 	?>
 </body>
