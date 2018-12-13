@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View</title>
+	<style>
+	table, th, td {
+	    border: 2px solid black;
+	    border-collapse: collapse;
+	}
+	</style>
+</head>
+<body>
+	<h1>Welcome to Popcorn Little Station</h1>
+<form action="mudel.py" method="get">
+	<p>Buyer's Name: <input type="text" name="Name"><br>
+	Street Address: <input type="text" name="Address"><br>
+	City, State, Zip: <input type="text" name="City"><br>
+	Phone number: <input type="text" name="Phone"><br></p>
+	<table>
+		<tr>
+			<td>Product</td>
+			<td>Price</td>
+			<td>Quantity</td>
+		</tr>
+		<tr>
+			<td>Unpopped Popcorn (1 lb.)</td>
+			<td>$3.00</td>
+			<td><input type="text" name="Unpopped"></td>
+		</tr>
+		<tr>
+			<td>Caramel Popcorn (2 lb. canister)</td>
+			<td>$3.50</td>
+			<td><input type="text" name="Caramel"></td>
+		</tr>
+		<tr>
+			<td>Caramel Nut Popcorn (2 lb. canister)</td>
+			<td>$4.50</td>
+			<td><input type="text" name="CaramelNut"></td>
+		</tr>
+		<tr>
+			<td>Toffey Nut Popcorn (2 lb. canister)</td>
+			<td>$5.00</td>
+			<td><input type="text" name="ToffeyNut"></td>
+		</tr>
+	</table>
+	<h3>Payment Method</h3>
+	<input type="radio"  name="op" value="Visa" checked="on">Visa<br>
+	<input type="radio"  name="op" value="Master">Master Card <br>
+	<input type="radio"  name="op" value="Discover">Discover <br>
+	<input type="radio"  name="op" value="Check">Check <br>
+	<button type="submit" name = "Submit">Submit Order</button>
+</form>
+<input type="button" value="Clear Order From" onclick="location.href='View.html'">
+</body>
+</html>
