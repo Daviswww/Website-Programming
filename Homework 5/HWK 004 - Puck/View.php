@@ -32,13 +32,13 @@ function frame() {
 	r1 = Math.floor(Math.random() * 13 + 1);
 	s1 = Math.floor(Math.random() * 4);
 	document.getElementById("puck1").src = "puck/" + suits[s1] + r1 + ".png";
-	r2 = Math.floor(Math.random() * 13);
+	r2 = Math.floor(Math.random() * 13 + 1);
 	s2 = Math.floor(Math.random() * 4);
 	document.getElementById("puck2").src = "puck/" + suits[s2] + r2 + ".png";
-	r3 = Math.floor(Math.random() * 13);
+	r3 = Math.floor(Math.random() * 13 + 1);
 	s3 = Math.floor(Math.random() * 4);
 	document.getElementById("puck3").src = "puck/" + suits[s3] + r3 + ".png";
-	r4 = Math.floor(Math.random() * 13);
+	r4 = Math.floor(Math.random() * 13 + 1);
 	s4 = Math.floor(Math.random() * 4);
 	document.getElementById("puck4").src = "puck/" + suits[s4] + r4 + ".png";
 }
