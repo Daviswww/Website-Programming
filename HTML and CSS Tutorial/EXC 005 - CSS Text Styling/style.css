@@ -1,0 +1,39 @@
+@font-face{
+    src: url(fonts/GloriaHallelujah.ttf);
+    /*font name*/
+    font-family: nos;
+}
+
+h1 {
+    /*字形*/
+    font-family: 'Courier New', Courier, monospace;
+    /*大小*/
+    font-size: 22px;
+    /*斜體等...*/
+    font-style: italic;
+    font-weight: 100;
+    /*靠哪*/
+    text-align: left;
+    text-emphasis: none;
+    /*邊距*/
+    text-indent: 30px;
+    /*大小寫*/
+    text-transform: capitalize;
+    color: red;
+    /*字距*/
+    letter-spacing: 10px;
+    /*單字距*/
+    word-spacing: 10px;
+    /*斷句距*/
+    line-height: 40px;
+}
+.pt{
+    font-size: 50px;
+    line-height: 62px;
+    /*use font*/
+    font-family: nos;
+}
+a {
+    text-decoration: none;
+    /*color: green;*/
+}
