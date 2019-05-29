@@ -6,6 +6,6 @@ CREATE TABLE users(
 	user_uid varchar(256) not null,
 	user_pwd varchar(256) not null
 
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd)
 	VALUES ('Davis', 'Nielsen', 'user@gmail.com', 'Admin', 'test123');
