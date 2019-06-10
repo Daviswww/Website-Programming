@@ -12,18 +12,13 @@
 <input type="button" value="Go back!" onclick="window.location.href='../index.html'" /><br>
 	<?php
 		$str = $_POST["str"];
-		$sql = "SELECT * FROM Log;";
+		$sql = "SELECT * FROM users;";
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
-		$count = 1;
 		if($resultCheck > 0)
 		{
 			while($row = mysqli_fetch_assoc($result))
 			{
-				if($count > 10)
-				{
-					break;
-				}
 				$TryStrpos=strpos($row['Log_path'],$str);
 				if(!$TryStrpos)
 				{
@@ -31,11 +26,8 @@
 				}
 				else
 				{
-					echo 	"第" . $count . "筆" .
-							" ID: " . $row['Log_id'] . 
-							" Path: " . $row['Log_path']. 
-							 "<br>";
-					$count++;
+					echo "Username: ".$row['user_uid']."<br>".
+						 "Password: ".$row['user_pwd']."<br>";
 				}
 			}
 		}

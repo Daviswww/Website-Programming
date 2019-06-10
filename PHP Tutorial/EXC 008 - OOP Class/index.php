@@ -1,20 +1,21 @@
 <?php
-    include 'includes/newclass.inc.php';
-    include 'includes/parentclass.inc.php';
-    $object = new NewClass;
+    include 'includes/dbh.inc.php';
+    include 'includes/user.inc.php';
+    include 'includes/viewuser.inc.php';
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>
-            include!
+            database
         </title>
         <meta charset="UTF-8">
     </head>
     <body>
-        <p>
-            Hello World!
-        </p>
+        <?php
+            $users = new ViewUser();
+            $users->showAllUsers();
+        ?>
     </body>
 </html>

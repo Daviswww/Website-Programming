@@ -1,94 +1,130 @@
-body{
-    background-color: #f1f1f1;
+*{
+  margin: 0;
+  padding: 0;
+  
 }
 
-.nav-main{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 60px;
-    background-color: #FFF;
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 1000;
+.container{
+  width: 100%;
+  height: 812px;
+  background-color: #c0c0c0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100vh;
 }
-
-.btn-toggle-nav{
-    width: 60px;
-    height: 100%;
-    background-color: #F98F39;
-    background-image: url("img/menu.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: center;
-    cursor: pointer;
+.item{
+  flex-grow: 1;
 }
-
-.btn-toggle-nav:hover{
-    opacity: 0.5;
+.item2{
+  flex-grow: 1;
 }
-
-.nav-main ul{
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 15px;
-}
-
-.nav-main ul li{
-    list-style: none;
-    line-height: 30px;
-}
-
-.nav-main ul li a{
+.checkbox-container {
     display: block;
-    height: 100%;
-    padding: 0 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #111;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-.nav-sidebar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    float: left;
     width: 50px;
-    height: calc(100vh - 60px);
-    padding: 0 5px;
-    background-color: #1b1b1b;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav-sidebar ul{
-    padding-top: 15px;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-.nav-sidebar li{
-    line-height: 60px;
-    list-style: none;
-}
-
-.nav-sidebar ul li span, .nav-sidebar ul li a  {
+    height: 50px;
+    position: relative;
+    background: #182825;
+  }
+  
+  .menu-content {
+    display: flex;
+    background: #182825;
+    color: white;
+    float: left;
+  }
+  
+  .menu-content ul {
     display: block;
-    height: 60px;
-    left: 0;
-    padding: 0 5px;
+    padding-left: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s ease 0.7s, width 0.7s ease;
+  }
+  
+  .menu-content ul li {
+    list-style: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.5s, background 0.5s;
+  }
+  .menu-content ul li a{
     text-decoration: none;
-    text-transform: uppercase;
-    color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    white-space: nowrap;
+    color:#000000;
+  }
+  .menu-content ul li:hover {
+    color: #0CD6AD;
+    background: #1E332F;
+  }
+  .checkbox-trigger {
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  
+  .hamburger-menu, .hamburger-menu::before, .hamburger-menu::after {
+    display: block;
+    position: absolute;
+    background: white;
+    width: 40px;
+    height: 4px;
+    margin: 1.3em 3em;
+    transition: background 0.3s;
+  }
+  
+  .hamburger-menu::before, .hamburger-menu::after {
+    content: '';
+    position: absolute;
+    margin: -0.7em 0 0;
+    transition: width 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+  }
+  
+  .hamburger-menu::after { margin-top: 0.7em; }
+  
+  .hamburger-menu {
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-top: 1.45em;
+    margin-right: 0.35em;
+    margin-left: 0.35em;
+    margin-bottom: 1.45em;
+    transition: width 0.3s ease;
+  }
+
+  .checkbox-trigger:checked { left: 202px; }
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu {
+  width: 2em;
+  transition: width 0.7s ease 0.7s;
 }
 
-.nav-sidebar ul li a :hover{
-    background-color: #222;
+.checkbox-trigger:checked + .menu-content .hamburger-menu::before {
+  width: 1.2em;
+  transform: rotate(-35deg);
+  margin-top: -0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu::after {
+  width: 1.2em;
+  transform: rotate(35deg);
+  margin-top: 0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content ul {
+  width: 200px;
+  height: 300px;
+  transition: width 0.7s ease 0.3s, height 0.3s ease;
 }
