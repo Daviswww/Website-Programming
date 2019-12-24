@@ -1,4 +1,7 @@
-
+*{
+    box-sizing: border-box;
+}
+  
 .header-text {
     color: white;
     text-shadow: 0 0 12px #000000;
@@ -12,6 +15,32 @@
     -o-background-size: cover;
     background: url('../images/sand.jpg') no-repeat center center scroll;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.box1{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
 
+.box1 .item{
+    width: 20rem;
+}
+.box1 .items{
+    width: 40rem;
+}
+.contain{
+    padding: 3rem 3rem;
+}
+.box2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;  
+    flex-direction: row-reverse;
+}
+.box2 .item{
+    width: 40rem;
+}

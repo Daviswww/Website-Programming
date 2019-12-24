@@ -1,0 +1,26 @@
+*{
+    padding: 0 0;
+    margin: 0 0;
+    box-sizing: border-box;
+}
+
+.mary{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+.mary table tr td{
+    width: 60px;
+    height: 60px;
+}
+.bk{
+    background-color: black;
+}
+.mary table, th, td {
+    border: 0.25rem solid black;
+    border-collapse: collapse;
+}
