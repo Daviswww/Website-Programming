@@ -3,7 +3,15 @@
     margin: 0 0;
     box-sizing: border-box;
 }
-
+body {
+    height: 100%;
+    background: #fff url("../img/bkg.jpg") fixed no-repeat center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+h1{
+    text-align:center;
+    font-family: 'Indie Flower', cursive;
+}
 .mary{
     position: absolute;
     top: 50%;
@@ -16,11 +24,52 @@
 .mary table tr td{
     width: 60px;
     height: 60px;
+    background-color: #FFF;
 }
-.bk{
+.mary table tr .bk{
     background-color: black;
 }
 .mary table, th, td {
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
     border: 0.25rem solid black;
     border-collapse: collapse;
+    text-align:center;
 }
+.roll{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    position:absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    margin: -50px -30px;
+}
+
+.roll .num{
+    display: inline;
+}
+
+.btn{
+    position:absolute;
+    z-index: 1001;
+    top: 50%;
+    left: 50%; 
+    background-color: #FFF;
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;  
+    border-radius: 50%;
+    display: inline-block;
+    padding-top: 25px;
+    cursor: pointer;
+}
+.btn .fn{
+    margin:0px auto;
+    text-align:center;
+}
+
+.btn:hover{
+    background-color: rgb(0, 156, 0);
+}
+

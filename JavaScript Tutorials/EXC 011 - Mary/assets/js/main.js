@@ -1,16 +1,41 @@
 
 $(function(){
-    var n = 3;
-    for(i = 0; i < n; i++){
-        $('#maryBox').append(
-        "<tr><td></td>"+
-        "<td class=\"bk\"></td>"+
-        "<td class=\"bk\"></td>"+
-        "<td class=\"bk\"></td>"+
-        "<td></td></tr>"
-        );        
+    let n = 16, set = 0;
+    let i = 0, time = 1000;
+    var count = 0;
+    var run;
+    document.getElementById("rand").onclick = function() {start()};
+    function start(){
+        count = Math.floor(Math.random()*3000)+5000;
+        $('.num').html(count);
+        time = count;
+        run = setInterval(showData, time);
+        //clearInterval(run);
     }
-    $('#maryBox').append(
-        "<tr><td></td><td></td><td></td><td></td><td></td></tr>"
-        );  
+
+    function showData(){
+        console.log(time)
+        document.getElementById(i++).style.background = "#FFF";
+        i %= n;
+        document.getElementById(i).style.background = "rgb(255, 173, 22)";
+        set+= i;
+        clearInterval(run);
+        if (time > 1000) {
+            time -= 200;
+            run = setInterval(showData, time);
+        } else if(time > 100){
+            time -= 100;
+            run = setInterval(showData, time);
+        } else if(time > 20){
+            time -= 0.5;
+            run = setInterval(showData, time);
+        } else if(time > 1){
+            time -= 0.05;
+            run = setInterval(showData, time);
+        }else{
+            clearInterval(run);
+        }
+    }
+    
 });
+
