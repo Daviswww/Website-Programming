@@ -6,7 +6,7 @@ $(function(){
     var run;
     document.getElementById("rand").onclick = function() {start()};
     function start(){
-        count = Math.floor(Math.random()*3000)+5000;
+        count = Math.floor(Math.random()*1000)+2000;
         $('.num').html(count);
         time = count;
         run = setInterval(showData, time);
@@ -23,7 +23,7 @@ $(function(){
         if (time > 1000) {
             time -= 200;
             run = setInterval(showData, time);
-        } else if(time > 100){
+        } else if(time > 200){
             time -= 100;
             run = setInterval(showData, time);
         } else if(time > 20){
@@ -33,7 +33,7 @@ $(function(){
             time -= 0.05;
             run = setInterval(showData, time);
         }else{
-            clearInterval(run);
+            clearInterval(run, time=null);
         }
     }
     
